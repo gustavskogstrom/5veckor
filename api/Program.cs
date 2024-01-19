@@ -1,4 +1,5 @@
 using api.Data;
+using api.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,6 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseMiddleware<Register>();
 
 app.MapIdentityApi<IdentityUser>();
 
