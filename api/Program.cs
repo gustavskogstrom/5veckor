@@ -15,7 +15,7 @@ builder.Services.AddDbContext<DataContext>(Options => {
 
 builder.Services.AddAuthentication();
 
-builder.Services.AddIdentityCore<IdentityUser>()
+builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<DataContext>();
 
 var app = builder.Build();
