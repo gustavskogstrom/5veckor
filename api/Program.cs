@@ -10,8 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DataContext>(Options => {
-    Options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
+builder.Services.AddDbContext<DataContext>(options => {
+    options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
 });
 
 builder.Services.AddAuthentication();

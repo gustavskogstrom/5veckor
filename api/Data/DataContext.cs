@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using api.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -15,5 +16,6 @@ namespace api.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) 
         {
         }
+        public DbSet<meny> meny => Set<meny>();
     }
 }
